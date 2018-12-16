@@ -1,0 +1,103 @@
+name: anaconda2-plus
+version: 5.3.1
+
+install_in_dependency_order: true
+
+channels:
+  - http://repo.anaconda.com/pkgs/main/
+
+specs:
+  - python 2.7.*
+  - pip
+  - nomkl
+  # conda packages
+  - conda
+  - conda-build
+  - conda-env
+  - conda-verify
+  - constructor
+  # core of the scipy stack
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - sqlalchemy
+  - pytables
+  - statsmodels
+  - scikit-image
+  - scikit-learn
+  - sympy
+  - tensorflow
+  # ipython and jupyter. qtconsle is skipped by define jupyter packages
+  # seperatedly.
+  - jupyterlab
+  - jupyterlab_launcher
+  - notebook
+  - nbconvert
+  - jupyter_console
+  - ipykernel
+  - ipywidgets
+  - jupyter_client
+  - ipython
+  # extensions of the scipy stask
+  - pandas-datareader
+  - pandasql
+  - seaborn
+  - dask
+  - blaze
+  - xarray
+  # data-driven documents
+  - bokeh
+  - bkcharts
+  - holoviews
+  - mpld3
+  - plotly
+  # documentation tools
+  - numpydoc
+  - docutils
+  - sphinx
+  - sphinx_rtd_theme
+  - sphinxcontrib
+  - markupsafe
+  # Basic development tools
+  - cmake
+  - git
+  - svn
+  - patchelf
+  - sqlite
+  - pygments
+  # Python development tools
+  - cython
+  - flake8
+  - jedi
+  - nose
+  - pep8
+  - rope
+  #  Python web frameworks
+  - django
+  - jinja2
+  - flask
+  - flask-cors
+  - flask-login
+  - flask-socketio
+  - flask-wtf
+  # Other libraries and tools
+  - networkx
+  - h5py
+  - msgpack-python
+  - openpyxl
+  - pydot
+  - python-graphviz
+  - pyyaml
+  - ruamel_yaml
+
+exclude:
+  # qt and pyqt is depended by matplotlib, but it is optional. We disable it
+  # here to reduce the package size.
+  - qt
+  - pyqt
+  # pandoc is depended by nbconvert, but it is optional. We disable it here as
+  # the version included is too old.
+  - pandoc
+
+license_file: EULA.txt
