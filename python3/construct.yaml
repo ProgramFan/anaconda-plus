@@ -67,12 +67,13 @@ specs:
   - sqlite
   - pygments
   # Python development tools
-  - cython
-  - flake8
-  - jedi
   - nose
+  - flake8
   - pep8
+  - jedi
   - rope
+  - yapf
+  - cython
   #  Python web frameworks
   - django
   - jinja2
