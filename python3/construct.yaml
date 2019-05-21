@@ -8,16 +8,16 @@ ignore_duplicate_files: true
 # channel, addon channel, and the conda-forge main channel. addon channels
 # shall not conflict with each other.
 channels:
-  - http://repo.anaconda.com/pkgs/main
   - https://conda.anaconda.org/plotly
   - https://conda.anaconda.org/pyviz
   - https://conda.anaconda.org/conda-forge/label/main
+  - http://repo.anaconda.com/pkgs/main
 
 specs:
   # Basic packages
   - python 3.7.*
   - pip
-  - nomkl
+    #- nomkl
   # conda packages
   - conda
   - conda-build
@@ -104,11 +104,14 @@ specs:
   # Altair tools
   - altair
   - vega_datasets
-  - jupyterlab
     #- vega     # needed for ipython notebook but not available in python3
   - selenium # for png and pdf exporting
   # Neovim and related tools
   - pynvim
+  # Pandoc tools
+  - pandoc
+  - pandocfilters
+  - pandoc-crossref
 
 exclude:
   # qt and pyqt is depended by matplotlib, but it is optional. We disable it
@@ -117,10 +120,10 @@ exclude:
   - pyqt
   # pandoc is depended by nbconvert, but it is optional. We disable it here as
   # the version included is too old.
-  - pandoc
+  # - pandoc
   # curl from conda-forge conflicts with libcurl from anaconda
-  - curl
+  # - curl
   # libopenblas from conda-forge conflicts with blas/lapack from anaconda
-  - libopenblas
+  #- libopenblas
 
 license_file: EULA.txt
