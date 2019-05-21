@@ -1,5 +1,13 @@
 #!/bin/bash
 #
 
-constructor --platform=linux-64 python2
-constructor --platform=linux-64 python3
+export https_proxy=http://127.0.0.1:1080
+export http_proxy=${https_proxy}
+CONSTRUCTOR=~/.local/opt/miniconda3/bin/constructor
+
+${CONSTRUCTOR} --platform=linux-64 python2
+${CONSTRUCTOR} --platform=linux-64 python3
+
+function do_test() {
+  echo This is the body
+}

@@ -1,32 +1,41 @@
 name: anaconda2-plus
-version: 5.3.1
+version: 2019.05.20
 
 install_in_dependency_order: true
+ignore_duplicate_files: true
 
+# NOTE: The channels shall be placed in this order: the anaconda official
+# channel, addon channel, and the conda-forge main channel. addon channels
+# shall not conflict with each other.
 channels:
-  - http://repo.anaconda.com/pkgs/main/
+  - https://conda.anaconda.org/plotly
+  - https://conda.anaconda.org/pyviz
+  - https://conda.anaconda.org/conda-forge/label/main
+  - http://repo.anaconda.com/pkgs/main
 
 specs:
+  # Basic packages
   - python 2.7.*
   - pip
-  - nomkl
+    #- nomkl
   # conda packages
   - conda
   - conda-build
   - conda-env
   - conda-verify
   - constructor
-  # core of the scipy stack
+  # SciPy stack
   - numpy
   - scipy
   - matplotlib
+  - sympy
   - pandas
-  - sqlalchemy
-  - pytables
   - statsmodels
+  - sqlalchemy # sql for pandas
+  - pytables   # hdf5 for pandas
+  # Machine learning stack
   - scikit-image
   - scikit-learn
-  - sympy
   - tensorflow
   # ipython and jupyter. qtconsle is skipped by define jupyter packages
   # seperatedly.
@@ -40,40 +49,30 @@ specs:
   - jupyter_client
   - ipython
   # extensions of the scipy stask
-  - pandas-datareader
-  - pandasql
   - seaborn
   - dask
   - blaze
   - xarray
-  # data-driven documents
-  - bokeh
-  - bkcharts
-  - holoviews
-  - mpld3
-  - plotly
   # documentation tools
   - numpydoc
   - docutils
   - sphinx
   - sphinx_rtd_theme
-  - sphinxcontrib
   - markupsafe
   # Basic development tools
   - cmake
-  - git
-  - svn
   - patchelf
   - sqlite
   - pygments
   # Python development tools
-  - cython
-  - flake8
-  - jedi
   - nose
+  - flake8
   - pep8
+  - jedi
   - rope
-  #  Python web frameworks
+  - yapf
+  - python-language-server
+  # Python web frameworks
   - django
   - jinja2
   - flask
@@ -90,6 +89,29 @@ specs:
   - python-graphviz
   - pyyaml
   - ruamel_yaml
+  # Plotly ecosystem
+  - plotly
+  - plotly_express
+  - plotly-orca
+  - dash
+  - dash-renderer
+  - dash-html-components
+  - dash-core-components
+  - dash-daq
+  - dash-table
+  # PyViz ecosystem (one meta package to rule them all)
+  # - pyviz  # not compatible with python 2.7
+  # Altair tools
+  - altair
+  - vega_datasets
+  - vega     # needed for ipython notebook but not available in python3
+  - selenium # for png and pdf exporting
+  # Neovim and related tools
+  - pynvim
+  # Pandoc tools
+  - pandoc
+  - pandocfilters
+  - pandoc-crossref
 
 exclude:
   # qt and pyqt is depended by matplotlib, but it is optional. We disable it
@@ -98,6 +120,10 @@ exclude:
   - pyqt
   # pandoc is depended by nbconvert, but it is optional. We disable it here as
   # the version included is too old.
-  - pandoc
+  # - pandoc
+  # curl from conda-forge conflicts with libcurl from anaconda
+  # - curl
+  # libopenblas from conda-forge conflicts with blas/lapack from anaconda
+  #- libopenblas
 
 license_file: EULA.txt
