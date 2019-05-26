@@ -1,16 +1,14 @@
 name: anaconda3-plus
-version: 2019.05.20
+version: 2019.05.26
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
 
-# NOTE: The channels shall be placed in this order: the anaconda official
-# channel, addon channel, and the conda-forge main channel. addon channels
-# shall not conflict with each other.
 channels:
+  - https://conda.anaconda.org/programfan
   - https://conda.anaconda.org/plotly
   - https://conda.anaconda.org/pyviz
-  - https://conda.anaconda.org/conda-forge/label/main
+  - https://conda.anaconda.org/conda-forge
   - http://repo.anaconda.com/pkgs/main
 
 specs:
@@ -40,13 +38,8 @@ specs:
   # ipython and jupyter. qtconsle is skipped by define jupyter packages
   # seperatedly.
   - jupyterlab
-  - jupyterlab_launcher
+  - jupyter
   - notebook
-  - nbconvert
-  - jupyter_console
-  - ipykernel
-  - ipywidgets
-  - jupyter_client
   - ipython
   # extensions of the scipy stask
   - seaborn
@@ -114,16 +107,9 @@ specs:
   - pandoc-crossref
 
 exclude:
-  # qt and pyqt is depended by matplotlib, but it is optional. We disable it
-  # here to reduce the package size.
-  - qt
-  - pyqt
-  # pandoc is depended by nbconvert, but it is optional. We disable it here as
-  # the version included is too old.
-  # - pandoc
-  # curl from conda-forge conflicts with libcurl from anaconda
-  # - curl
-  # libopenblas from conda-forge conflicts with blas/lapack from anaconda
-  #- libopenblas
+  - qt          # removed to shrink package
+  - pyqt        # removed to shrink package
+  - qtconsole   # removed to shrink package
+  - tensorboard # removed as conflict with tensorboard
 
 license_file: EULA.txt
