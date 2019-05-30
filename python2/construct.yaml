@@ -1,5 +1,5 @@
 name: anaconda2-plus
-version: 2019.05.26
+version: 2019.05.29
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -38,6 +38,7 @@ specs:
   # ipython and jupyter. qtconsle is skipped by define jupyter packages
   # seperatedly.
   - jupyterlab
+  - jupyterlab-extension-pack
   - jupyter
   - notebook
   - ipython
@@ -86,12 +87,14 @@ specs:
   - plotly
   - plotly_express
   - plotly-orca
+  - colorlover
   - dash
   - dash-renderer
   - dash-html-components
   - dash-core-components
   - dash-daq
   - dash-table
+  - jupyterlab-dash
   # PyViz ecosystem (one meta package to rule them all)
   # - pyviz  # not compatible with python 2.7
   # Altair tools
@@ -105,6 +108,12 @@ specs:
   - pandoc
   - pandocfilters
   - pandoc-crossref
+  # Other tools
+  - fortran-language-server
+  - fprettify
+  - compdb
+  - compiledb
+  - powerline-status
 
 exclude:
   - qt           # removed to reduce package size
