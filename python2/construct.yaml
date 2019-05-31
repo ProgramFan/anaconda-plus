@@ -1,5 +1,5 @@
 name: anaconda2-plus
-version: 2019.05.29
+version: 2019.05.31
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -94,7 +94,7 @@ specs:
   - dash-core-components
   - dash-daq
   - dash-table
-  - jupyterlab-dash
+    # - jupyterlab-dash # do not support python 2
   # PyViz ecosystem (one meta package to rule them all)
   # - pyviz  # not compatible with python 2.7
   # Altair tools

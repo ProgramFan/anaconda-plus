@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2019.05.29
+version: 2019.05.31
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
