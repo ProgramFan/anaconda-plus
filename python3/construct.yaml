@@ -84,16 +84,7 @@ specs:
   - pyyaml
   - ruamel_yaml
   # Plotly ecosystem
-  - plotly
-  - plotly_express
-  - plotly-orca
-  - colorlover
-  - dash
-  - dash-renderer
-  - dash-html-components
-  - dash-core-components
-  - dash-daq
-  - dash-table
+  - plotlylab
   - jupyterlab-dash
   # PyViz ecosystem (one meta package to rule them all)
   - pyviz

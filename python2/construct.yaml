@@ -84,17 +84,7 @@ specs:
   - pyyaml
   - ruamel_yaml
   # Plotly ecosystem
-  - plotly
-  - plotly_express
-  - plotly-orca
-  - colorlover
-  - dash
-  - dash-renderer
-  - dash-html-components
-  - dash-core-components
-  - dash-daq
-  - dash-table
-    # - jupyterlab-dash # do not support python 2
+  - plotlylab
   # PyViz ecosystem (one meta package to rule them all)
   # - pyviz  # not compatible with python 2.7
   # Altair tools
