@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2019.05.31
+version: 2019.08.13
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -38,7 +38,6 @@ specs:
   # ipython and jupyter. qtconsle is skipped by define jupyter packages
   # seperatedly.
   - jupyterlab
-  - jupyterlab-extension-pack
   - jupyter
   - notebook
   - ipython
@@ -107,9 +106,9 @@ specs:
   - powerline-status
 
 exclude:
-  - qt          # removed to shrink package
-  - pyqt        # removed to shrink package
-  - qtconsole   # removed to shrink package
-  - tensorboard # removed as conflict with tensorboard
+  #  - qt          # removed to shrink package
+  #- pyqt        # removed to shrink package
+  #- qtconsole   # removed to shrink package
+  #- tensorboard # removed as conflict with tensorboard
 
 license_file: EULA.txt
