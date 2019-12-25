@@ -1,5 +1,5 @@
 name: anaconda2-plus
-version: 2019.08.13
+version: 2019.12.26
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -9,7 +9,7 @@ channels:
   - https://conda.anaconda.org/plotly
   - https://conda.anaconda.org/pyviz
   - https://conda.anaconda.org/conda-forge/label/main
-  - http://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/main
 
 specs:
   # Basic packages
@@ -103,6 +103,7 @@ specs:
   - compdb
   - compiledb
   - powerline-status
+  - tmuxp
 
 # exclude:
   # - qt           # removed to reduce package size
