@@ -1,2 +1,4 @@
 anaconda[23]-plus*.sh
 *.yamle
+.DS_Store
+._*
