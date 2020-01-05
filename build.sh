@@ -4,10 +4,15 @@
 export https_proxy=http://127.0.0.1:1080
 export http_proxy=${https_proxy}
 CONSTRUCTOR=~/.local/opt/miniconda3/bin/constructor
-CONSTRUCTOR_ARGS="--conda-exe standalone-conda/conda.exe"
-DATE=$(date +%Y.%m.%d)
 
-sed -ie "s|version:.*$|version: $DATE|g" python[23]/construct.yaml
+function build_for_arch() {
+  local pkg=$1
+  local platform=$2
+  local date=$(date +%Y.%m.%d)
+  sed -iE "s|version:.*$|version: $date|g" "${pkg}/construct.yaml"
+  ${CONSTRUCTOR} --conda-exe "standalone-conda/conda-${platform}.exe" \
+    "--platform=${platform}" --verbose "$pkg"
+}
 
-${CONSTRUCTOR} ${CONSTRUCTOR_ARGS} --platform=linux-64 --verbose python2
-${CONSTRUCTOR} ${CONSTRUCTOR_ARGS} --platform=linux-64 --verbose python3
+build_for_arch miniconda3-plus linux-64
+build_for_arch miniconda3-plus linux-aarch64
