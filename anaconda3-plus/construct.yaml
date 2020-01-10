@@ -76,7 +76,7 @@ specs:
   - vega_datasets
   - selenium # [x86_64]
   # Neovim and related tools
-  - neovim
+  - neovim # [aarch64]
   - pynvim
   # Pandoc tools
   - pandoc # [x86_64]
