@@ -6,8 +6,9 @@ ignore_duplicate_files: true
 
 channels:
   - https://conda.anaconda.org/programfan
+  - https://conda.anaconda.org/plotly # [x86_64]
   - https://conda.anaconda.org/conda-forge
-  - https://conda.anaconda.org/c4aarch64
+  - https://conda.anaconda.org/c4aarch64 # [ aarch64 ]
 
 specs:
   # Basic packages
@@ -25,9 +26,9 @@ specs:
   - matplotlib
   - sympy
   - pandas
-    #- statsmodels
-  - sqlalchemy # sql for pandas
-  - pytables   # hdf5 for pandas
+  - statsmodels
+  - sqlalchemy
+  - pytables
   # Machine learning stack
   - scikit-image
   - scikit-learn
@@ -41,11 +42,6 @@ specs:
   - psutil
   - notebook
   - ipython
-  # extensions of the scipy stask
-  - seaborn # [x86_64]
-  - dask # [x86_64]
-  - blaze # [x86_64]
-  - xarray # [x86_64]
   # documentation tools
   - numpydoc
   - docutils
@@ -80,6 +76,7 @@ specs:
   - vega_datasets
   - selenium # [x86_64]
   # Neovim and related tools
+  - neovim
   - pynvim
   # Pandoc tools
   - pandoc # [x86_64]
