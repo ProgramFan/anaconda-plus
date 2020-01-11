@@ -1,0 +1,26 @@
+name: miniconda2-plus
+version: 2020.01.11
+
+install_in_dependency_order: true
+ignore_duplicate_files: true
+
+channels:
+  - https://conda.anaconda.org/conda-forge
+  - https://conda.anaconda.org/c4aarch64 # [not x86_64]
+
+specs:
+  # Python
+  - python =2.7
+  - pip
+  # Conda
+  - conda
+  - conda-build
+  - conda-env
+  - constructor
+  # Basic build tools
+  - cmake
+  - git
+  - make
+  - patchelf
+
+license_file: EULA.txt

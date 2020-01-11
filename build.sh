@@ -14,7 +14,11 @@ function build_for_arch() {
     "--platform=${platform}" --verbose "$pkg"
 }
 
-build_for_arch miniconda3-plus linux-64
-build_for_arch miniconda3-plus linux-aarch64
-build_for_arch anaconda3-plus linux-64
-build_for_arch anaconda3-plus linux-aarch64
+#build_for_arch miniconda3-plus linux-64
+#build_for_arch miniconda3-plus linux-aarch64
+#build_for_arch anaconda3-plus linux-64
+#build_for_arch anaconda3-plus linux-aarch64
+#build_for_arch python3 linux-64
+#build_for_arch python3 linux-aarch64
+build_for_arch miniconda2-plus linux-64
+build_for_arch miniconda2-plus linux-aarch64
