@@ -1,12 +1,12 @@
 name: miniconda3-plus
-version: 2020.01.11
+version: 2020.02.23
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
 
 channels:
+  - https://conda.anaconda.org/programfan
   - https://conda.anaconda.org/conda-forge
-  - https://conda.anaconda.org/c4aarch64
 
 specs:
   # Python

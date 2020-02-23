@@ -1,12 +1,11 @@
 name: python3
-version: 2020.01.11
+version: 2020.02.23
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
 
 channels:
-  - https://conda.anaconda.org/conda-forge # [x86_64]
-  - https://conda.anaconda.org/c4aarch64 # [ not x86_64]
+  - https://conda.anaconda.org/conda-forge
 
 specs:
   # Python

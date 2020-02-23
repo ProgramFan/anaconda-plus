@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2020.01.11
+version: 2020.02.23
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -8,7 +8,6 @@ channels:
   - https://conda.anaconda.org/programfan
   - https://conda.anaconda.org/plotly # [x86_64]
   - https://conda.anaconda.org/conda-forge
-  - https://conda.anaconda.org/c4aarch64 # [ aarch64 ]
 
 specs:
   # Basic packages
@@ -82,6 +81,11 @@ specs:
   - pandoc # [x86_64]
   - pandocfilters # [x86_64]
   - pandoc-crossref # [x86_64]
+  # C++ tools
+  - clang
+  - llvm
+  - clang-tools
+  - cling # [x86_64]
   # Other tools
   - fortran-language-server
   - fprettify
