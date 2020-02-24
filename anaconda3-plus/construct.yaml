@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2020.02.23
+version: 2020.02.24
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -85,7 +85,6 @@ specs:
   - clang
   - llvm
   - clang-tools
-  - cling # [x86_64]
   # Other tools
   - fortran-language-server
   - fprettify
