@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2020.02.24
+version: 2020.03.26
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -41,6 +41,7 @@ specs:
   - psutil
   - notebook
   - ipython
+  - python-cufflinks
   # documentation tools
   - numpydoc
   - docutils
