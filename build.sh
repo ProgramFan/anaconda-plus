@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 
-export https_proxy=http://127.0.0.1:1080
-export http_proxy=${https_proxy}
-CONSTRUCTOR=~/.local/opt/miniconda3/bin/constructor
+# export https_proxy=http://127.0.0.1:1080
+# export http_proxy=${https_proxy}
+CONSTRUCTOR=~/.local/opt/anaconda3-plus/bin/constructor
 
 function build_for_arch() {
   local pkg=$1
@@ -18,7 +18,7 @@ function build_for_arch() {
 #build_for_arch miniconda3-plus linux-aarch64
 #build_for_arch anaconda3-plus linux-64
 #build_for_arch anaconda3-plus linux-aarch64
-#build_for_arch python3 linux-64
-#build_for_arch python3 linux-aarch64
+build_for_arch python3 linux-64
+build_for_arch python3 linux-aarch64
 build_for_arch miniconda2-plus linux-64
 build_for_arch miniconda2-plus linux-aarch64

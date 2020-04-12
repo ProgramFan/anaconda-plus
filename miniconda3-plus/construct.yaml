@@ -1,5 +1,5 @@
 name: miniconda3-plus
-version: 2020.02.23
+version: 2020.04.11
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
