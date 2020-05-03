@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2020.04.11
+version: 2020.05.03
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -37,6 +37,7 @@ specs:
   - dash-daq
   - ipywidgets
   - jupyterlab
+  - jupytext
   - plotly-orca
   - psutil
   - notebook
@@ -93,5 +94,6 @@ specs:
   - compiledb # [x86_64]
   - powerline-status
   - tmuxp
+  - go-shfmt # [x86_64]
 
 license_file: EULA.txt
