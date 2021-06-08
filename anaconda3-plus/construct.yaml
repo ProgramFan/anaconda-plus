@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2020.05.03
+version: 2020.08.08
 
 install_in_dependency_order: true
 ignore_duplicate_files: true
@@ -11,7 +11,8 @@ channels:
 
 specs:
   # Basic packages
-  - python 3.7.*
+  - python 3.8.* # [ x86_64 ]
+  - python 3.7.* # [ aarch64 ]
   - pip
   # conda packages
   - conda
@@ -31,6 +32,8 @@ specs:
   # Machine learning stack
   - scikit-image
   - scikit-learn
+  # Animated Images
+  - moviepy
   # plotly and jupyterlab and ipython
   - plotly
   - dash
@@ -38,7 +41,8 @@ specs:
   - ipywidgets
   - jupyterlab
   - jupytext
-  - plotly-orca
+  - plotly-orca # [ aarch64 ]
+  - python-kaleido # [ x86_64 ]
   - psutil
   - notebook
   - ipython
