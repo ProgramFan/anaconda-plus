@@ -1,26 +1,26 @@
 name: miniconda3-plus
-version: 2020.04.11
+version: 2021.06.23
+company: conda-forge
 
-install_in_dependency_order: true
 ignore_duplicate_files: true
 
 channels:
-  - https://conda.anaconda.org/programfan
-  - https://conda.anaconda.org/conda-forge
+  - conda-forge
 
 specs:
   # Python
-  - python 3.7.*
+  - python 3.9.*
   - pip
   # Conda
-  - conda
-  - conda-build
-  - conda-env
+  - mamba # use mamba instead of conda
   - constructor
   # Basic build tools
   - cmake
   - git
-  - make
-  - patchelf
+  - patchelf # [ linux ]
 
 license_file: EULA.txt
+
+write_condarc: True
+keep_pkgs: True
+

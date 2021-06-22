@@ -1,26 +1,20 @@
 name: anaconda3-plus
-version: 2020.08.08
+version: 2021.06.23
 
-install_in_dependency_order: true
 ignore_duplicate_files: true
 
 channels:
+  - conda-forge
   - https://conda.anaconda.org/programfan
-  - https://conda.anaconda.org/plotly # [x86_64]
-  - https://conda.anaconda.org/conda-forge
 
 specs:
-  # Basic packages
-  - python 3.8.* # [ x86_64 ]
-  - python 3.7.* # [ aarch64 ]
+  # Base python environment
+  - python 3.9.*
   - pip
-  # conda packages
+  # Conda environment
   - conda
-  - conda-build
-  - conda-env
-  - conda-verify
   - constructor
-  # SciPy stack
+  # Basic SciPy stack
   - numpy
   - scipy
   - matplotlib
@@ -28,76 +22,49 @@ specs:
   - pandas
   - statsmodels
   - sqlalchemy
-  - pytables
   # Machine learning stack
   - scikit-image
   - scikit-learn
-  # Animated Images
-  - moviepy
-  # plotly and jupyterlab and ipython
-  - plotly
+  # Jupyterlab, ipython and plotly
+  - plotly >=5
+  - jupyterlab >=3
+  - ipywidgets >=7.5
   - dash
   - dash-daq
-  - ipywidgets
-  - jupyterlab
-  - jupytext
-  - plotly-orca # [ aarch64 ]
-  - python-kaleido # [ x86_64 ]
-  - psutil
-  - notebook
+  # - python-kaleido [problemmatic]
   - ipython
-  - python-cufflinks
+  - xeus-python
   # documentation tools
   - numpydoc
   - docutils
   - sphinx
   - sphinx_rtd_theme
   - markupsafe
+  - pandoc # [x86_64]
+  - pandoc-crossref # [x86_64]
   # Basic development tools
   - cmake
-  - patchelf
+  - patchelf # [ not osx ]
   - sqlite
-  # Python development tools
-  - nose
-  - flake8
-  - pep8
+  # Editor and LSPs
+  - neovim # [aarch64 and not osx]
+  - pynvim
   - jedi
-  - rope
   - yapf
   - python-language-server
+  - clang # [ not osx ]
+  - clang-tools >=12
+  - fortran-language-server
+  - fprettify
+  - go-shfmt # [x86_64]
   # Other libraries and tools
   - networkx
-  - h5py
   - msgpack-python
   - openpyxl
-  - pydot
   - python-graphviz
   - pyyaml
   - ruamel_yaml
-  # Plotly ecosystem
-  - plotlylab
-  # Altair tools
-  - altair
-  - vega_datasets
-  - selenium # [x86_64]
-  # Neovim and related tools
-  - neovim # [aarch64]
-  - pynvim
-  # Pandoc tools
-  - pandoc # [x86_64]
-  - pandocfilters # [x86_64]
-  - pandoc-crossref # [x86_64]
-  # C++ tools
-  - clang
-  - llvm
-  - clang-tools
-  # Other tools
-  - fortran-language-server
-  - fprettify
-  - compdb
-  - compiledb # [x86_64]
-  - powerline-status
-  - tmuxp
-  - go-shfmt # [x86_64]
+  - nose
+  - jinja2
 
 license_file: EULA.txt
