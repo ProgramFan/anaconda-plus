@@ -51,7 +51,7 @@ specs:
   - pynvim
   - jedi
   - yapf
-  - python-language-server
+  - jedi-language-server
   - clang # [ not osx ]
   - clang-tools >=12
   - fortran-language-server
