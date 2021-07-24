@@ -1,10 +1,11 @@
 name: anaconda3-plus
-version: 2021.06.28
+version: 2021.07.24
 
 ignore_duplicate_files: true
 
 channels:
   - conda-forge
+  - local
   - https://conda.anaconda.org/programfan
 
 specs:
@@ -49,6 +50,7 @@ specs:
   # Editor and LSPs
   - neovim # [aarch64 and not osx]
   - pynvim
+  - nodejs
   - jedi
   - yapf
   - jedi-language-server
@@ -57,6 +59,8 @@ specs:
   - fortran-language-server
   - fprettify
   - go-shfmt # [x86_64]
+  - cmake-language-server
+  - cmakelang
   # Other libraries and tools
   - networkx
   - msgpack-python

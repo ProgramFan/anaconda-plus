@@ -17,4 +17,5 @@ function build_for_arch() {
 # build_for_arch miniconda3-plus linux-64
 # build_for_arch miniconda3-plus linux-aarch64
 build_for_arch anaconda3-plus linux-64
+# build_for_arch cctbx linux-64
 # build_for_arch anaconda3-plus linux-aarch64
