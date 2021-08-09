@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2021.07.24
+version: 2021.08.09
 
 ignore_duplicate_files: true
 
@@ -70,5 +70,8 @@ specs:
   - ruamel_yaml
   - nose
   - jinja2
+
+exclude:
+  - gcc_impl_linux-64 # [ linux ]
 
 license_file: EULA.txt

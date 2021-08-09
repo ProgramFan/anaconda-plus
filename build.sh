@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 
-# export https_proxy=http://127.0.0.1:1080
-# export http_proxy=${https_proxy}
+export https_proxy=http://127.0.0.1:1080
+export http_proxy=${https_proxy}
 CONSTRUCTOR=~/.local/opt/anaconda3-plus/bin/constructor
 
 function build_for_arch() {
