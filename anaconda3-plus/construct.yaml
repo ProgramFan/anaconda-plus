@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2021.08.09
+version: 2022.01.18
 
 ignore_duplicate_files: true
 
@@ -26,15 +26,15 @@ specs:
   # Machine learning stack
   - scikit-image
   - scikit-learn
+  # - pytorch
   # Jupyterlab, ipython and plotly
-  - plotly >=5
-  - jupyterlab >=3
-  - ipywidgets >=7.5
+  - plotly
+  - jupyterlab
+  - ipywidgets
   - dash
   - dash-daq
-  # - python-kaleido [problemmatic]
+  # - python-kaleido # not able to package, but can install with pip
   - ipython
-  - xeus-python
   # documentation tools
   - numpydoc
   - docutils
@@ -45,22 +45,20 @@ specs:
   - pandoc-crossref # [x86_64]
   # Basic development tools
   - cmake
-  - patchelf # [ not osx ]
+  - patchelf # [ linux ]
   - sqlite
   # Editor and LSPs
-  - neovim # [aarch64 and not osx]
   - pynvim
   - nodejs
   - jedi
   - yapf
   - jedi-language-server
   - clang # [ not osx ]
-  - clang-tools >=12
+  - clang-tools
   - fortran-language-server
   - fprettify
   - go-shfmt # [x86_64]
   - cmake-language-server
-  - cmakelang
   # Other libraries and tools
   - networkx
   - msgpack-python
@@ -70,8 +68,5 @@ specs:
   - ruamel_yaml
   - nose
   - jinja2
-
-exclude:
-  - gcc_impl_linux-64 # [ linux ]
 
 license_file: EULA.txt
