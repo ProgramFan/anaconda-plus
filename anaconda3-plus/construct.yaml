@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2022.01.26
+version: 2022.02.21
 
 ignore_duplicate_files: true
 
@@ -59,6 +59,7 @@ specs:
   - fprettify
   - go-shfmt # [x86_64]
   - cmake-language-server
+  - pylint
   # Other libraries and tools
   - networkx
   - msgpack-python
@@ -68,8 +69,5 @@ specs:
   - ruamel_yaml
   - nose
   - jinja2
-
-exclude:
-  - gcc_impl_linux-64 # [ linux ]
 
 license_file: EULA.txt
