@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2022.02.21
+version: 2022.02.28
 
 ignore_duplicate_files: true
 
@@ -38,6 +38,7 @@ specs:
   # documentation tools
   - numpydoc
   - docutils
+  - mkdocs
   - sphinx
   - sphinx_rtd_theme
   - markupsafe
