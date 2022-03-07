@@ -38,12 +38,15 @@ specs:
   # documentation tools
   - numpydoc
   - docutils
-  - mkdocs
   - sphinx
   - sphinx_rtd_theme
   - markupsafe
   - pandoc # [x86_64]
   - pandoc-crossref # [x86_64]
+  - mkdocs
+  - weasyprint
+  - beautifulsoup4
+  - libsass
   # Basic development tools
   - cmake
   - patchelf # [ linux ]
