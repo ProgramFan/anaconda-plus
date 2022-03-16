@@ -5,7 +5,6 @@ ignore_duplicate_files: true
 
 channels:
   - conda-forge
-  - local
   - https://conda.anaconda.org/programfan
 
 specs:
