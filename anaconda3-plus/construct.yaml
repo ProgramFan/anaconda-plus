@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2022.02.28
+version: 2022.03.15
 
 ignore_duplicate_files: true
 
@@ -44,9 +44,8 @@ specs:
   - pandoc # [x86_64]
   - pandoc-crossref # [x86_64]
   - mkdocs
-  - weasyprint
-  - beautifulsoup4
-  - libsass
+  - mkdocs-with-pdf
+  - mkdocs-material
   # Basic development tools
   - cmake
   - patchelf # [ linux ]
