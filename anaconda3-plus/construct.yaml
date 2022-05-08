@@ -1,11 +1,10 @@
 name: anaconda3-plus
-version: 2022.03.15
+version: 2022.05.08
 
 ignore_duplicate_files: true
 
 channels:
   - conda-forge
-  - local
   - https://conda.anaconda.org/programfan
 
 specs:
