@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2022.05.08
+version: 2023.10.06
 
 ignore_duplicate_files: true
 
@@ -9,11 +9,14 @@ channels:
 
 specs:
   # Base python environment
-  - python 3.9.*
+  - python 3.10.*
   - pip
   # Conda environment
   - conda
   - constructor
+  - conda-build
+  - mamba
+  - boa
   # Basic SciPy stack
   - numpy
   - scipy
@@ -57,7 +60,7 @@ specs:
   - jedi-language-server
   - clang # [ not osx ]
   - clang-tools
-  - fortran-language-server
+  - fortls
   - fprettify
   - go-shfmt # [x86_64]
   - cmake-language-server
