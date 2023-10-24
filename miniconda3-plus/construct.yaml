@@ -1,8 +1,8 @@
 name: miniconda3-plus
-version: 2021.06.23
+version: 2022.11.10
 company: conda-forge
 
-ignore_duplicate_files: true
+ignore_duplicate_files: False
 
 channels:
   - conda-forge
@@ -10,17 +10,17 @@ channels:
 specs:
   # Python
   - python 3.9.*
+  # Conda related
+  - conda 22.9.0
+  - conda-build 3.22.0
+  - conda-verify 3.1.1
+  - mamba 0.27.0
+  - boa 0.12.0
+  - constructor 3.3.1
   - pip
-  # Conda
-  - mamba # use mamba instead of conda
-  - constructor
-  # Basic build tools
-  - cmake
-  - git
-  - patchelf # [ linux ]
 
 license_file: EULA.txt
 
 write_condarc: True
-keep_pkgs: True
+keep_pkgs: False
 
