@@ -1,22 +1,20 @@
 name: anaconda3-plus
-version: 2023.10.06
+version: 2024.05.06
 
 ignore_duplicate_files: true
 
 channels:
   - conda-forge
-  - https://conda.anaconda.org/programfan
+  - programfan
 
 specs:
   # Base python environment
   - python 3.10.*
   - pip
   # Conda environment
-  - conda
-  - constructor
-  - conda-build
   - mamba
   - boa
+  - constructor
   # Basic SciPy stack
   - numpy
   - scipy
@@ -52,13 +50,15 @@ specs:
   - cmake
   - patchelf # [ linux ]
   - sqlite
+  - git
   # Editor and LSPs
   - pynvim
   - nodejs
   - jedi
   - yapf
   - jedi-language-server
-  - clang # [ not osx ]
+  - clang
+  - libcxx
   - clang-tools
   - fortls
   - fprettify
@@ -74,5 +74,7 @@ specs:
   - ruamel_yaml
   - nose
   - jinja2
+  - p7zip
+  - py7zr
 
 license_file: EULA.txt
