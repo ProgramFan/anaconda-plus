@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2024.05.06
+version: 2024.05.10
 
 ignore_duplicate_files: true
 
@@ -9,7 +9,7 @@ channels:
 
 specs:
   # Base python environment
-  - python 3.10.*
+  - python 3.11.*
   - pip
   # Conda environment
   - mamba

@@ -10,8 +10,9 @@ function build_for_arch() {
   local platform=$2
   local date=$(date +%Y.%m.%d)
   sed -i "s|version:.*$|version: $date|g" "${pkg}/construct.yaml"
-  ${CONSTRUCTOR} --conda-exe "standalone-conda/conda-${platform}.exe" \
-    "--platform=${platform}" --verbose "$pkg"
+  # ${CONSTRUCTOR} --conda-exe "standalone-conda/conda-${platform}.exe" \
+  #   "--platform=${platform}" --verbose "$pkg"
+  ${CONSTRUCTOR} --verbose "$pkg"
 }
 
 # build_for_arch miniconda3-plus linux-64
