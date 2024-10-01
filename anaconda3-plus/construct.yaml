@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2024.08.09
+version: 2024.10.1
 
 ignore_duplicate_files: true
 
@@ -7,14 +7,24 @@ channels:
   - conda-forge
   - programfan
 
+write_condarc: True
+keep_pkgs: True
+initialize_conda: True
+initialize_by_default: False
+
 specs:
   # Base python environment
-  - python 3.11.*
+  - python 3.12.*
   - pip
-  # Conda environment
-  - mamba
+  # Conda environment, adapted for building and packaging.
+  - conda >=24.7.0
+  - mamba >=1.5.9
+  - micromamba >=2.0
+  - conda-build
   - boa
   - constructor
+  - miniforge_console_shortcut 1.* # [win]
+
   # Basic SciPy stack
   - numpy
   - scipy
@@ -23,9 +33,11 @@ specs:
   - pandas
   - statsmodels
   - sqlalchemy
+
   # Machine learning stack
   - scikit-image
   - scikit-learn
+
   # - pytorch
   # Jupyterlab, ipython and plotly
   - plotly
@@ -53,7 +65,7 @@ specs:
   - git
   # Editor and LSPs
   - pynvim
-  - nodejs
+  - nodejs =20  # use node 20.x to stick to centos 7
   - jedi
   - yapf
   - jedi-language-server
@@ -78,5 +90,10 @@ specs:
   - p7zip
   - py7zr
   - pyelftools
+  - pyinstaller
+
+virtual_specs:
+  - __glibc >=2.17 # [linux]
+  - __osx >=10.13 # [osx]
 
 license_file: EULA.txt
