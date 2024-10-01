@@ -1,0 +1,47 @@
+name: mesadeps
+version: 2022.09.15
+company: conda-forge
+
+ignore_duplicate_files: true
+
+channels:
+  - conda-forge
+
+specs:
+  # Python
+  - python 3.12.*
+  - pip
+  # Basic build tools
+  - cmake
+  - git
+  # Compilers and build tools
+  - gcc_linux-64 12.*
+  - gxx_linux-64 12.*
+  - gfortran_linux-64 12.*
+  - sysroot_linux-64 2.17  # [linux64]
+  - meson
+  - mako
+  - flex
+  - bison
+  - pkg-config
+  # Build dependencies
+  - libdrm                       # [linux]
+  - llvmdev 14.*
+  - xorg-libx11
+  - xorg-libxext
+  - xorg-xextproto
+  - xorg-xf86vidmodeproto
+  - xorg-libxrandr
+  - xorg-libxfixes
+  - xorg-glproto
+  - libxcb
+  - xorg-libxdamage
+  # Runtime dependencies
+  - libllvm14
+  # Build dependencies
+
+license_file: EULA.txt
+
+write_condarc: True
+keep_pkgs: False
+

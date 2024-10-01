@@ -8,7 +8,7 @@ channels:
   - programfan
 
 write_condarc: True
-keep_pkgs: True
+keep_pkgs: False
 initialize_conda: True
 initialize_by_default: False
 
