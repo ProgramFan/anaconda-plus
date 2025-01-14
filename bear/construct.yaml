@@ -1,0 +1,15 @@
+name: bear
+version: 2025.1.14
+company: conda-forge
+
+ignore_duplicate_files: true
+
+channels:
+  - conda-forge
+
+specs:
+  - bear
+
+license_file: EULA.txt
+keep_pkgs: False
+
