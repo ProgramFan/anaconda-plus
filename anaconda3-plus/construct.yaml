@@ -1,5 +1,5 @@
 name: anaconda3-plus
-version: 2025.1.15
+version: 2025.2.24
 
 ignore_duplicate_files: true
 
@@ -79,6 +79,7 @@ specs:
   - pylint
   - ruff
   # Other libraries and tools
+  - flask
   - networkx
   - msgpack-python
   - openpyxl
